@@ -1,0 +1,15 @@
+INSERT INTO Cliente VALUES (1, 'Lucas Barros', 'M', '27/03/1995', '445556878', '44455588888', 'SP', 'São Paulo', '4444444', '11982336178', 'lucas251@gmail.com', 'casa 2', '00055587');
+
+INSERT INTO Veiculo VALUES (1,'KPA2220','Uno', 'Fiat', 'Vermelho','2012', 3, 80); 
+INSERT INTO Veiculo VALUES (2,'JMX4601','Gol', 'Volkswagen', 'Prata','2009', 2, 50);
+INSERT INTO Veiculo VALUES (3, 'KJH4568', 'HB20', 'Hyundai', 'Preto', '2016', 3, 90);
+INSERT INTO Veiculo VALUES (4, 'DFE4487', 'Ônix', 'Chevrolet', 'Preto', '2015', 3, 90);
+INSERT INTO Veiculo VALUES (5, 'JND8974', 'Prisma', 'Chevrolet', 'Azul', '2011', 2, 70);
+INSERT INTO Veiculo VALUES (6, 'ABC4875', 'Celta', 'Chevrolet', 'Preto', '2011', 2, 60);
+INSERT INTO Veiculo VALUES (7, 'POP2112', 'i30', 'Hyundai', 'Branco', '2010', 3, 80);
+INSERT INTO Veiculo VALUES (8, 'CRL0203', 'Etios', 'Toyota', 'Cinza', '2013', 3, 90);
+INSERT INTO Veiculo VALUES (9, 'MRN2108', 'Punto', 'Fiat', 'Verde', '2016', 3, 90);
+ 
+INSERT INTO Locacao VALUES (1, 1, 1, '01/06/2017', 'Rua X, 99', 'sem', '00258877', '2', '03/06/2017', 'Rua Y, 88', 'sem', '222000808', 150);
+
+INSERT INTO multa VALUES (1, 'Dano ao veículo', 1, 100) 
