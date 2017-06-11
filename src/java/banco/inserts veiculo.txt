@@ -1,0 +1,20 @@
+Select * from cliente;
+SELECT * FROM Veiculo;
+
+
+INSERT INTO Cliente VALUES (1, 'Lucas Barros', 'M', '27/03/1995', '445556878', '44455588888', 'SP', 'São Paulo', 
+'4444444','Rua das princesas' ,'11982336178', 'lucas251@gmail.com', 'senha', 'casa 2', '00055587');
+
+INSERT INTO Cliente VALUES (2, 'Matheus Rocha', 'M', '09/10/1997', '53.665.259-4', '464.598.778.07', 'SP', 'São Paulo', 
+'4444444','Rua dos Doces' ,'123456123', 'matheus@gmail.com', 'controle1', 'casa', '05566-010');
+
+
+INSERT INTO Veiculo VALUES (1,'KPA2220','Uno', 'Fiat', 'Vermelho','2012', 3, 80); 
+INSERT INTO Veiculo VALUES (2,'JMX4601','Gol', 'Volkswagen', 'Prata','2009', 2, 50);
+INSERT INTO Veiculo VALUES (3, 'KJH4568', 'HB20', 'Hyundai', 'Preto', '2016', 3, 90);
+INSERT INTO Veiculo VALUES (4, 'DFE4487', 'Ônix', 'Chevrolet', 'Preto', '2015', 3, 90);
+INSERT INTO Veiculo VALUES (5, 'JND8974', 'Prisma', 'Chevrolet', 'Azul', '2011', 2, 70);
+ 
+INSERT INTO Locacao VALUES (1, 2, 1, '01/06/2017', 'Rua X, 99', 'sem', '00258877', '2', '03/06/2017', 'Rua Y, 88', 'sem', '222000808', 150);
+
+INSERT INTO multa (cod_multa, descricao,cod_cliente,valor) values (1,'Dano ao veiculo', 1, 200.00); 
