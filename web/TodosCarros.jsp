@@ -1,7 +1,7 @@
 <%-- 
     Document   : TodosCarros
     Created on : 09/06/2017, 01:09:03
-    Author     : mathe
+    Author     : matheus
 --%>
 
 <%@page import="javabeans.Admin"%>
@@ -77,7 +77,7 @@
                     <div id="conteudo2"></div>
                 </form>
                     
-                <form action = "InserirVeículo"  method= "POST">
+                <form action = "InserirVeiculo"  method= "POST">
                     <div id="conteudo2"></div>
                     <div id="conteudo-left"></div>
                     <div id="conteudo-right">

@@ -37,19 +37,6 @@ public class InserirVeiculo extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet InserirVeiculo</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet InserirVeiculo at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -64,35 +51,6 @@ public class InserirVeiculo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        int cod_veiculo = Integer.parseInt(request.getParameter("id"));
-        String nome = request.getParameter("nome");
-        String marca = request.getParameter("marca");
-        String cor = request.getParameter("cor");
-        String ano = request.getParameter("ano");
-        String placa = request.getParameter("placa");
-        int qtd_disponivel = Integer.parseInt(request.getParameter("qtd_disponivel"));
-        int valor_diaria = Integer.parseInt(request.getParameter("valor_diaria"));
-        
-        Veiculo v = new Veiculo();
-        v.setCod_veiculo(cod_veiculo);
-        v.setNome_modelo(nome);
-        v.setCor(cor);
-        v.setMarca(marca);
-        v.setAno(ano);
-        v.setPlaca(placa);
-        v.setQtd_disponivel(qtd_disponivel);
-        v.setValor_diaria(cod_veiculo);
-        
-        VeiculoDAO dao = new VeiculoDAOconcreto();
-        try {
-            dao.salvarVeiculo(v);
-            System.out.println("OBJETO INSERIDO");
-        } catch (SQLException ex) {
-            Logger.getLogger(InserirVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        request.getRequestDispatcher("TodoCarros.jsp").forward(request, response);
                         
     }
 
@@ -107,7 +65,40 @@ public class InserirVeiculo extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        int cod_veiculo = Integer.parseInt(request.getParameter("id"));
+        String nome = request.getParameter("nome");
+        String marca = request.getParameter("marca");
+        String cor = request.getParameter("cor");
+        String ano = request.getParameter("ano");
+        String placa = request.getParameter("placa");
+        int qtd_disponivel = Integer.parseInt(request.getParameter("qtd_disponivel"));
+        int valor_diaria = Integer.parseInt(request.getParameter("valor_diaria"));
+        
+        System.out.println("pegou valores");
+        
+        Veiculo v = new Veiculo();
+        v.setCod_veiculo(cod_veiculo);
+        v.setNome_modelo(nome);
+        v.setCor(cor);
+        v.setMarca(marca);
+        v.setAno(ano);
+        v.setPlaca(placa);
+        v.setQtd_disponivel(qtd_disponivel);
+        v.setValor_diaria(valor_diaria);
+        
+        System.out.println("criou jbeans");
+        
+        VeiculoDAO dao = new VeiculoDAOconcreto();
+        try {
+            dao.salvarVeiculo(v);
+            System.out.println("OBJETO INSERIDO");
+        } catch (SQLException ex) {
+            System.out.println("não inseriu");
+            Logger.getLogger(InserirVeiculo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("chegou no request");
+        request.getRequestDispatcher("TodosCarros.jsp").forward(request, response);
     }
 
     /**
