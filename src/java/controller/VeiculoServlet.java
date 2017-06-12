@@ -21,7 +21,7 @@ public class VeiculoServlet extends HttpServlet {
       
         Veiculo veiculoAutenticado = new Veiculo();
         
-        int escolha = Integer.parseInt((request.getParameter("escolha"))); //////////////////////////////////////não envia paramentro
+        int escolha = Integer.parseInt((request.getParameter("escolha"))); ////////////////não envia paramentro
         
         
         VeiculoDAO dao = new VeiculoDAOconcreto();

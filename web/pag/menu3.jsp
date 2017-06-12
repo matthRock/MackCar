@@ -15,8 +15,8 @@
     <body>
         <nav id="menu2">
             <ul>
-                <li><a href="Home.jsp">Home</a></li>
-                <li><a href="perfil.jsp">Perfil</a></li>
+                <li><a href="HomeAdmin.jsp">Home</a></li>
+                <li><a href="PerfilAdmin.jsp">Perfil</a></li>
                 <li><a href="TodosUsuarios.jsp">Clientes</a></li>
                 <li><a href="TodosCarros.jsp">Carros</a></li>
                 <li><a href="TodasMultasAdm.jsp">Multas</a></li>

@@ -4,7 +4,7 @@
     Author     : mathe
 --%>
 
-<%@page import="javabeans.Cliente"%>
+<%@page import="javabeans.Admin"%>
 <%@page import="javabeans.Veiculo"%>
 <%@page import="dao.VeiculoDAOconcreto"%>
 <%@page import="java.util.List"%>
@@ -27,7 +27,7 @@
             <br/><br/>
             <div id="conteudo">
                 <%
-                    Cliente clienteAutenticado = (Cliente) session.getAttribute("clienteAutenticado");
+                    Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
                     VeiculoDAO dao = new VeiculoDAOconcreto();
                     List<Veiculo> veiculos = null;
                     veiculos = dao.buscaVeiculo();
@@ -89,11 +89,13 @@
                         <input type = "text" name= "marca" placeholder="Marca do modelo" required="required"/><br><br> 
                         <input type = "text" name= "cor" placeholder="Cor do modelo" required="required"/><br><br> 
                         <input type = "text" name= "ano" placeholder="Ano do modelo" required="required"/><br><br> 
-                        <button type ="submit" value="Deletar Cliente">Inserir Veículo</button><br><br>
+                        <input type = "text" name= "placa" placeholder="Placa" required="required"/><br><br> 
+                        <input type = "text" name= "qtd_disponivel" placeholder="Quantidade disponível" required="required"/><br><br> 
+                        <input type = "text" name= "valor_diaria" placeholder="Valor da Diária" required="required"/><br><br> 
+                        <button type ="submit" value="Inserir Veiculo">Inserir Veículo</button><br><br>
                     </div>
                     <div id="conteudo2"></div>
                 </form>
-
             </div>
             <%@include file="pag/footer.jsp" %>
         </div>

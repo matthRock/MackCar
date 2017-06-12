@@ -4,7 +4,7 @@
     Author     : mathe
 --%>
 
-<%@page import="javabeans.Cliente"%>
+<%@page import="javabeans.Admin"%>
 <%@page import="dao.MultaDAOconcreto"%>
 <%@page import="java.util.List"%>
 <%@page import="javabeans.Multa"%>
@@ -26,7 +26,7 @@
             <br/><br/>
             <div id="conteudo">
                 <%
-                    Cliente clienteAutenticado = (Cliente) session.getAttribute("clienteAutenticado");
+                    Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
                     MultaDAO dao = new MultaDAOconcreto();
                     List<Multa> multas = null;
                     multas = dao.buscaMultas();
@@ -40,6 +40,7 @@
                             <td>Código da Multa</td>
                             <td>Descriçao</td>
                             <td>Código Cliente</td>
+                            <td>Valor da Multa</td>
                         </tr>
 
                         <%
@@ -50,6 +51,7 @@
                             <td><%= m.getCod_multa()%></td>
                             <td><%= m.getDescricao()%></td>
                             <td><%= m.getCod_cliente()%></td>
+                            <td><%= m.getValor()%></td>
                         </tr>
 
                         <%
@@ -82,7 +84,7 @@
                         <input type = "text" name= "id" placeholder="Código da multa" required="required"/><br>
                         <input type = "text" name= "descricao" placeholder="descrição da multa" required="required"/><br>
                         <input type = "text" name= "id_cliente" placeholder="Código dp cliente" required="required"/><br><br> 
-                        <button type ="submit" value="Deletar Cliente">Deletar Multa</button><br><br>
+                        <button type ="submit" value="Deletar Cliente">Adicionar Multa</button><br><br>
                     </div>
                     <div id="conteudo2"></div>
                 </form>

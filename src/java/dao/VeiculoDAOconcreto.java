@@ -101,6 +101,56 @@ public class VeiculoDAOconcreto implements VeiculoDAO  {
             
     }
     
+    @Override
+    public void deletarVeiculo (int id) throws SQLException{
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pst = null;
+             
+        try{
+            pst = conexao.prepareStatement("delete from veiculo where cod_veiculo = ?");
+            pst.setInt(1, id);
+            pst.executeUpdate();
+        
+        }catch (SQLException ex) {
+            System.err.println("Erro "+ex);
+        }finally{
+            ConnectionFactory.closeConection(conexao);
+        }
+        
+        
+    }
+    
+    @Override
+    public void salvarVeiculo(Veiculo v) throws SQLException{
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pst = null;
+        
+        
+        try{
+            pst = conexao.prepareStatement("insert into veiculo (cod_veiculo, placa, nome_modelo, marca, cor, ano, qtd_disponivel, valor_diaria)"
+                    + "values (?,?,?,?,?,?,?,?)");
+                  
+            pst.setInt(1, v.getCod_veiculo());
+            pst.setString(2, v.getPlaca());
+            pst.setString(3, v.getNome_modelo());
+            pst.setString(4, v.getMarca());
+            pst.setString(5, v.getCor());
+            pst.setString(6, v.getAno());
+            pst.setInt(7, v.getQtd_disponivel());
+            pst.setInt(8, v.getValor_diaria());
+                        
+            pst.executeUpdate();
+            
+            
+        }catch (SQLException ex) {
+            System.err.println("Erro "+ex);
+        }finally{
+            ConnectionFactory.closeConection(conexao);
+        }
+        
+    }
+    
 }
         
      

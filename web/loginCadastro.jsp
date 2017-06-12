@@ -27,7 +27,7 @@
 
                         <input type = "text" name= "email" placeholder="E-mail" required="required"/><br><br>
                         <input type = "password" name= "senha" placeholder="********" required="required"/><br><br>
-
+                        <input type="radio" name="adm" value="adm"/>Login Adm<br><br>
                         <button type="submit" class="logar">Logar</button><br><br>
 
                     </form>

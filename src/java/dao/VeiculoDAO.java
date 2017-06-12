@@ -10,4 +10,8 @@ public interface VeiculoDAO {
     
     public Veiculo buscaVeiculoId(int id) throws SQLException;
     
+    public void deletarVeiculo (int id) throws SQLException;
+    
+    public void salvarVeiculo (Veiculo v) throws SQLException;
+    
 }
