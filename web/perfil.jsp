@@ -53,7 +53,11 @@
                 <div id="conteudo3">
                     <br/><br/>
                     <center><img src="imagens/perfil.jpg" alt=""/>
-                        <br/><br/>
+                        <br/><br/><br/><br/>
+                        
+                        <a href="AtualizaCliente.jsp">Alterar Dados</a>
+                                                               
+                        <br><br>
                 </div>
             </div>
             <%@include file="pag/footer.jsp" %>

@@ -149,47 +149,37 @@ public class ClienteDAOconcreto implements ClienteDAO {
     }
     
     
-    /*@Override
-    public Veiculo buscaVeiculoId(int id) throws SQLException{
-        
-        Veiculo veiculo = null;
+    @Override
+    public void alterarCliente(Cliente c) throws SQLException {
+       
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pst = null;
         
+        int id = c.getCod_cliente();
+        
         try{
-            
-            pst = conexao.prepareStatement("select * from veiculo where cod_veiculo = ?");
+            pst = conexao.prepareStatement("update cliente set estado=?, cidade=?, endereco=?, complemento=?, "
+                    + "telefone=?, cep=?, email=? where cod_cliente = "+id);
+                              
+            pst.setString(1, c.getEstado());
+            pst.setString(2, c.getCidade());
+            pst.setString(3, c.getEndereco());
+            pst.setString(4, c.getComplemento()); 
+            pst.setString(5, c.getTelefone());
+            pst.setString(6, c.getCep());
+            pst.setString(7, c.getEmail());
+                  
+            pst.execute();
+               
+        }catch (SQLException ex) {
+            System.err.println("Erro "+ex);
+        }finally{
+            ConnectionFactory.closeConection(conexao);
+        }
+    }
         
-            pst.setInt(1, id);
-            
-            ResultSet rs = pst.executeQuery();
-            
-            if (rs.next()) {
-                        
-                veiculo = new Veiculo();
-                
-                veiculo.setCod_veiculo(rs.getInt("cod_veiculo"));
-                veiculo.setPlaca(rs.getString("placa"));
-                veiculo.setNome_modelo(rs.getString("nome_modelo"));
-                veiculo.setMarca(rs.getString("marca"));
-                veiculo.setCor(rs.getString("cor"));
-                veiculo.setAno(rs.getString("ano"));
-                veiculo.setQtd_disponivel(rs.getInt("qtd_disponivel"));
-                veiculo.setValor_diaria(rs.getInt("valor_diaria"));
-            }
-            
-            System.out.println("VEICULO ENCONTRADO");
-	    } catch (SQLException e) {
-                System.out.println("Erro de SQL:" + e.getMessage());
-	    }
-            
-        return veiculo;
-            
-    }*/
- 
-        
-                
 }
+
     
     
        

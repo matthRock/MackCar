@@ -14,4 +14,6 @@ public interface ClienteDAO {
     
     public List <Cliente> buscaCliente() throws SQLException;
     
+    public void alterarCliente(Cliente c) throws SQLException;
+    
 }
