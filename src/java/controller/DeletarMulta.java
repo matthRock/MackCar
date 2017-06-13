@@ -5,14 +5,14 @@
  */
 package controller;
 
-import dao.VeiculoDAO;
-import dao.VeiculoDAOconcreto;
+import dao.MultaDAO;
+import dao.MultaDAOconcreto;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javabeans.Veiculo;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,8 +23,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author mathe
  */
-@WebServlet(name = "DeletarVeiculo", urlPatterns = {"/DeletarVeiculo"})
-public class DeletarVeiculo extends HttpServlet {
+@WebServlet(name = "DeletarMulta", urlPatterns = {"/DeletarMulta"})
+public class DeletarMulta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,10 +43,10 @@ public class DeletarVeiculo extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet DeletarVeiculo</title>");            
+            out.println("<title>Servlet DeletarMulta</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet DeletarVeiculo at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DeletarMulta at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -81,15 +81,11 @@ public class DeletarVeiculo extends HttpServlet {
         String escolha = request.getParameter("escolha");
         int escolha2 = Integer.parseInt(escolha);
         
-        VeiculoDAO dao = new VeiculoDAOconcreto();
-        try {
-            dao.deletarVeiculo(escolha2);
-            System.out.println("OBJETO DELETADO");
-        } catch (SQLException ex) {
-            Logger.getLogger(DeletarVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-        }      
+        MultaDAO dao = new MultaDAOconcreto();
+        dao.deletarMulta(escolha2);
+        System.out.println("OBJETO DELETADO");      
         
-        request.getRequestDispatcher("TodosCarros.jsp").forward(request, response);
+        request.getRequestDispatcher("TodasMultasAdm.jsp").forward(request, response);
     }
 
     /**

@@ -80,6 +80,53 @@ public class MultaDAOconcreto implements MultaDAO{
             
         return multas;
     }
+
+    @Override
+    public void salvarMulta(Multa m) throws SQLException {    
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pst = null;
+        
+        
+        try{
+            pst = conexao.prepareStatement("insert into multa (cod_multa, descricao, cod_cliente, valor)"
+                    + "values (?,?,?,?)");
+                  
+            pst.setInt(1, m.getCod_multa());
+            pst.setString(2, m.getDescricao());
+            pst.setInt(3, m.getCod_cliente());
+            pst.setDouble(4, m.getValor());
+
+                        
+            pst.executeUpdate();
+            
+            
+        }catch (SQLException ex) {
+            System.err.println("Erro "+ex);
+        }finally{
+            ConnectionFactory.closeConection(conexao);
+        }
+        
+    
+    }
+
+    @Override
+    public void deletarMulta(int id) {
+    Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pst = null;
+             
+        try{
+            pst = conexao.prepareStatement("delete from multa where cod_multa = ?");
+            pst.setInt(1, id);
+            pst.executeUpdate();
+        
+        }catch (SQLException ex) {
+            System.err.println("Erro "+ex);
+        }finally{
+            ConnectionFactory.closeConection(conexao);
+        }
+        
+        
+        }
    
 }
    
