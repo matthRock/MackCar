@@ -76,6 +76,7 @@
                     </div>
                     <div id="conteudo2"></div>
                 </form>
+                
                     
                 <form action = "InserirVeiculo"  method= "POST">
                     <div id="conteudo2"></div>
@@ -96,19 +97,7 @@
                     </div>
                     <div id="conteudo2"></div>
                 </form>  
-                    
-                <form action="PesquisarVeiculo" method="POST">
-                    <div id="conteudo2"></div>
-                    <div id="conteudo-left"></div>
-                    <div id="conteudo-right">
-                        <h4>Deseja alterar um veículo?</h4>
-                        <h5>Digite os dados  do veículo que você deseja alterar.</h5>
-
-                        <input type = "text" name= "id_alterar" placeholder="Código do veículo" required="required"/><br>
-                        <button type ="submit" value="Alterar">Alterar Veiculo</button><br><br>
-                    </div>
-                    <div id="conteudo2"></div>
-                </form>    
+                        
             </div>
             <%@include file="pag/footer.jsp" %>
         </div>

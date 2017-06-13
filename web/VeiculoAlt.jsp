@@ -1,7 +1,7 @@
 <%-- 
     Document   : VeiculoAlt
     Created on : 13/06/2017, 01:27:26
-    Author     : mathe
+    Author     : matheus
 --%>
 
 <%@page import="dao.VeiculoDAOconcreto"%>
@@ -26,10 +26,11 @@
             <div id="conteudo">
                 <%
                     Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
-                    //VeiculoDAO dao = VeiculoDAOconcreto();
-                    int  = 0;
+                    Veiculo v;
+                    v = (Veiculo) session.getAttribute("v");
                     VeiculoDAO dao = new VeiculoDAOconcreto();
-                    if(id > 0){dao.buscaVeiculoId(id);}
+                    v = dao.buscaVeiculoId(1);
+                    
                     
                 %>
                 <center><h1>Alterar Veiculo</h1>

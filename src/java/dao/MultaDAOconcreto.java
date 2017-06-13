@@ -88,8 +88,7 @@ public class MultaDAOconcreto implements MultaDAO{
         
         
         try{
-            pst = conexao.prepareStatement("insert into multa (cod_multa, descricao, cod_cliente, valor)"
-                    + "values (?,?,?,?)");
+            pst = conexao.prepareStatement("insert into multa (cod_multa, descricao, cod_cliente, valor_multa) values (?,?,?,?)");
                   
             pst.setInt(1, m.getCod_multa());
             pst.setString(2, m.getDescricao());

@@ -16,20 +16,19 @@
         
     <body>
         
-        <div id="site" style= "text-align:center" class="alert alert-success">
+        <div id="site" class="alert alert-success">
 
             <%@include file="pag/menu2.jsp" %>
-        
          
         <%  Cliente clienteAutenticado = (Cliente) session.getAttribute("clienteAutenticado");%> 
         
         <h1>Atualização de Dados</h1>
         
-        
-        <div style= "text-align:center"> 
+        <br/><br/>
+            <div id="conteudo"> 
             
             <form name="form1" action = "AtualizaClienteServlet" method= "POST">
-            
+            <div id="conteudo1"></div>
                 <div style= "text-align:center" >
                     
                     Estado: <input type = "text" name= "estado" value= "<%out.print(clienteAutenticado.getEstado());%>"/><br><br> 

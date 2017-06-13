@@ -105,7 +105,7 @@ public class InserirMulta extends HttpServlet {
             Logger.getLogger(InserirMulta.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("chegou no response");
-        response.sendRedirect("TodasMultasAdm.jsp");
+        request.getRequestDispatcher("TodasMultasAdm.jsp").forward(request, response);
     }
 
     /**

@@ -72,13 +72,21 @@ public class PesquisarVeiculo extends HttpServlet {
         
        
         int id = Integer.parseInt(request.getParameter("id_alterar"));
-        //VeiculoDAO dao = new VeiculoDAOconcreto();
+        VeiculoDAO dao = new VeiculoDAOconcreto();
         HttpSession sessao = request.getSession();
-        //Veiculo v;
+        Veiculo v;
+        try {
+            v = dao.buscaVeiculoId(id);
+            sessao.setAttribute("v", v);
+            sessao.setMaxInactiveInterval(600);
+        } catch (SQLException ex) {
+            Logger.getLogger(PesquisarVeiculo.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            request.getRequestDispatcher("VeiculoAlt.jsp").forward(request, response);
+        }
               
-            sessao.setAttribute("id", id);
-            response.sendRedirect("VeiculoAlt.jsp");
-            //request.getRequestDispatcher("VeiculoAlt.jsp").forward(request, response);
+            
+            
     }
 
     /**

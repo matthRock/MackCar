@@ -15,7 +15,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <title>Todos os Clientes</title>
+        <title>Todas as Multas</title>
     </head>
 
     <body>
@@ -28,7 +28,7 @@
                 <%
                     Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
                     MultaDAO dao = new MultaDAOconcreto();
-                    List<Multa> multas = null;
+                    List<Multa> multas;
                     multas = dao.buscaMultas();
                 %>
 

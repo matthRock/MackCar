@@ -29,7 +29,6 @@
                 <h1>
                     <% Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
                         out.print("Bem vindo " + adminAutenticado.getNome());
-
                         AluguelDAO dao = new AluguelDAOconcreto();
                         List<Aluguel> alugueis = dao.buscaAluguelId(adminAutenticado.getCod_admin());
                     %> 

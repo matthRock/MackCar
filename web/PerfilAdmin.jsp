@@ -27,15 +27,14 @@
                     <h2>Informações da Conta</h2>
                     
                     
-                        <%  Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
-                            out.print("<input type='text' name='nome' value='"+ adminAutenticado.getNome() +"'>" );
-                        %> 
+                    <p> <%  Admin adminAutenticado = (Admin) session.getAttribute("adminAutenticado");
+                            out.print("<b>"+ adminAutenticado.getNome() +"</b>" );
+                        %> </p>
                     
 
-                    <% out.print("<input type='text' name='login' value='"+ adminAutenticado.getLogin()+"'>");%>
-                    <% out.print("<input type='text' name='senha' value='"+ adminAutenticado.getSenha() +"'>");%>
+                    <p><% out.print("<b>"+ adminAutenticado.getLogin()+"</b>");%></p>
+                    <p><% out.print("<b>"+ adminAutenticado.getSenha() +"</b>");%></p>
                     <br/><br/>
-                    <a href="AtualizaAdmin">Alterar Dados</a>
                 </div>
                 <div id="conteudo3">
                     <br/><br/>
