@@ -1,0 +1,31 @@
+Mon Jun 12 23:56:06 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+----------------------------------------------------------------
+Mon Jun 12 23:56:06 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015c-9f61-3168-ffff87602e4c
+no diretório de banco de dados C:\Users\mathe\OneDrive\Documentos\NetBeansProjects\MackCar\bd1\mackcar_bd 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=C:\Users\mathe\Desktop\glassfish4\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\mathe\OneDrive\Documentos\NetBeansProjects\MackCar\bd1
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Jun 12 23:56:14 BRT 2017:
+Encerrando a instância a816c00e-015c-9f61-3168-ffff87602e4c
+Mon Jun 12 23:56:14 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = mackcar_bd), (DRDAID = {2}), Banco de dados 'mackcar_bd' fechado.
+----------------------------------------------------------------
+Mon Jun 12 23:56:17 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 560740aa-015c-9f61-3168-ffff87602e4c
+no diretório de banco de dados C:\Users\mathe\OneDrive\Documentos\NetBeansProjects\MackCar\bd1\mackcar_bd 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=C:\Users\mathe\Desktop\glassfish4\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\mathe\OneDrive\Documentos\NetBeansProjects\MackCar\bd1
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''

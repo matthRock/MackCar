@@ -32,7 +32,7 @@
                     multas = dao.buscaMultas();
                 %>
 
-                <center><h1>Clientes</h1>
+                <center><h1>Multas</h1>
 
                                      
                     <table border="1">
@@ -74,17 +74,18 @@
                     <div id="conteudo2"></div>
                 </form>
                     
-                <form action = "InserirMulta"  method= "POST">
+                <form action="InserirMulta"  method="POST">
                     <div id="conteudo2"></div>
                     <div id="conteudo-left"></div>
                     <div id="conteudo-right">
                         <h4>Deseja inserir uma Multa?</h4>
                         <h5>Digite os dados  da multa que você deseja inserir.</h5>
 
-                        <input type = "text" name= "id" placeholder="Código da multa" required="required"/><br>
-                        <input type = "text" name= "descricao" placeholder="descrição da multa" required="required"/><br>
-                        <input type = "text" name= "id_cliente" placeholder="Código dp cliente" required="required"/><br><br> 
-                        <button type ="submit" value="Deletar Cliente">Adicionar Multa</button><br><br>
+                        <input type="text" name="id" placeholder="Código da multa" required="required"/><br>
+                        <input type="text" name="descricao" placeholder="descrição da multa" required="required"/><br>
+                        <input type="text" name="cliente" placeholder="Código do cliente" required="required"/><br>
+                        <input type="text" name="valor" placeholder="valor da multa" required="required"/><br><br> 
+                        <button type="submit" value="Adiciobar">Adicionar Multa</button><br><br>
                     </div>
                     <div id="conteudo2"></div>
                 </form>

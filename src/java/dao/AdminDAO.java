@@ -14,5 +14,6 @@ import javabeans.Admin;
 public interface AdminDAO {
     
     public Admin autenticacao(Admin a);
+    public void alterar(Admin a);
     
 }

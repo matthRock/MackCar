@@ -17,7 +17,6 @@
             <ul>
                 <li><a href="HomeAdmin.jsp">Home</a></li>
                 <li><a href="PerfilAdmin.jsp">Perfil</a></li>
-                <li><a href="TodosUsuarios.jsp">Clientes</a></li>
                 <li><a href="TodosCarros.jsp">Carros</a></li>
                 <li><a href="TodasMultasAdm.jsp">Multas</a></li>
                 <li><a href="LogOut.jsp">Sair</a></li>

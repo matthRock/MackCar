@@ -31,7 +31,7 @@ public class MultaDAOconcreto implements MultaDAO{
                 multa.setCod_multa(rs.getInt("cod_multa"));
                 multa.setDescricao(rs.getString("descricao"));
                 multa.setCod_cliente(rs.getInt("cod_cliente"));
-                multa.setValor(rs.getDouble("valor"));
+                multa.setValor(rs.getDouble("valor_multa"));
                 multas.add(multa);
             }
         }
@@ -67,7 +67,7 @@ public class MultaDAOconcreto implements MultaDAO{
                 multa.setCod_multa(rs.getInt("cod_multa"));
                 multa.setDescricao(rs.getString("descricao"));
                 multa.setCod_cliente(rs.getInt("cod_cliente"));
-                multa.setValor(rs.getInt("valor"));
+                multa.setValor(rs.getInt("valor_multa"));
                 multas.add(multa);
             }
         }

@@ -5,13 +5,20 @@
  */
 package controller;
 
+import dao.VeiculoDAO;
+import dao.VeiculoDAOconcreto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javabeans.Veiculo;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -72,7 +79,33 @@ public class AlterarVeiculo extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            int id = Integer.parseInt(request.getParameter("id"));
+            String nome = request.getParameter("nome");
+            String marca = request.getParameter("marca");
+            String cor = request.getParameter("cor");
+            String ano = request.getParameter("ano");
+            String placa = request.getParameter("placa");
+            int qtd = Integer.parseInt(request.getParameter("qtd_disponivel"));
+            int valor = Integer.parseInt(request.getParameter("valor_diaria"));
+            VeiculoDAO dao = new VeiculoDAOconcreto();
+            Veiculo v = new Veiculo();
+            v.setAno(ano);
+            v.setCod_veiculo(id);
+            v.setCor(cor);
+            v.setMarca(marca);
+            v.setNome_modelo(nome);
+            v.setPlaca(placa);
+            v.setQtd_disponivel(qtd);
+            v.setValor_diaria(valor);
+                try {
+                    dao.salvarVeiculo(v);
+                    response.sendRedirect("TodosCarros.jsp");
+                    //request.getRequestDispatcher("TodosCarros.jsp").forward(request, response);
+                } catch (SQLException ex) {
+                    Logger.getLogger(AlterarVeiculo.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            
     }
 
     /**

@@ -95,24 +95,17 @@
                         <button type ="submit" value="Inserir Veiculo">Inserir Veículo</button><br><br>
                     </div>
                     <div id="conteudo2"></div>
-                </form>
+                </form>  
                     
-                <form action = "AlterarVeiculo"  method= "POST">
+                <form action="PesquisarVeiculo" method="POST">
                     <div id="conteudo2"></div>
                     <div id="conteudo-left"></div>
                     <div id="conteudo-right">
                         <h4>Deseja alterar um veículo?</h4>
-                        <h5>Digite o código do veículo que você deseja alterar.</h5>
+                        <h5>Digite os dados  do veículo que você deseja alterar.</h5>
 
-                        <input type = "text" name= "id" placeholder="Código do veículo" required="required"/><br>
-                        <input type = "text" name= "nome" placeholder="Nome do modelo" required="required"/><br>
-                        <input type = "text" name= "marca" placeholder="Marca do modelo" required="required"/><br><br> 
-                        <input type = "text" name= "cor" placeholder="Cor do modelo" required="required"/><br><br> 
-                        <input type = "text" name= "ano" placeholder="Ano do modelo" required="required"/><br><br> 
-                        <input type = "text" name= "placa" placeholder="Placa" required="required"/><br><br> 
-                        <input type = "text" name= "qtd_disponivel" placeholder="Quantidade disponível" required="required"/><br><br> 
-                        <input type = "text" name= "valor_diaria" placeholder="Valor da Diária" required="required"/><br><br> 
-                        <button type ="submit" value="Inserir Veiculo">Inserir Veículo</button><br><br>
+                        <input type = "text" name= "id_alterar" placeholder="Código do veículo" required="required"/><br>
+                        <button type ="submit" value="Alterar">Alterar Veiculo</button><br><br>
                     </div>
                     <div id="conteudo2"></div>
                 </form>    
